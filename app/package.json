@@ -11,6 +11,9 @@
 		"storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook"
 	},
 	"dependencies": {
+		"@fortawesome/fontawesome-free": "^5.12.1",
+		"axios": "^0.19.2",
+		"bulma": "^0.8.0",
 		"core-js": "^3.6.4",
 		"vue": "^2.6.11",
 		"vuex": "^3.1.2"
@@ -29,6 +32,7 @@
 		"@vue/cli-service": "~4.2.0",
 		"@vue/eslint-config-prettier": "^6.0.0",
 		"@vue/test-utils": "1.0.0-beta.31",
+		"axios-mock-adapter": "^1.17.0",
 		"babel-eslint": "^10.0.3",
 		"babel-loader": "^8.0.6",
 		"babel-preset-vue": "^2.0.2",
@@ -45,21 +49,31 @@
 		"env": {
 			"node": true
 		},
-		"extends": [ "plugin:vue/essential", "eslint:recommended", "@vue/prettier" ],
+		"extends": [
+			"plugin:vue/essential",
+			"eslint:recommended",
+			"@vue/prettier"
+		],
 		"parserOptions": {
 			"parser": "babel-eslint"
 		},
 		"rules": {},
 		"overrides": [
 			{
-				"files": [ "**/__tests__/*.{j,t}s?(x)", "**/tests/unit/**/*.spec.{j,t}s?(x)" ],
+				"files": [
+					"**/__tests__/*.{j,t}s?(x)",
+					"**/tests/unit/**/*.spec.{j,t}s?(x)"
+				],
 				"env": {
 					"jest": true
 				}
 			}
 		]
 	},
-	"browserslist": [ "> 1%", "last 2 versions" ],
+	"browserslist": [
+		"> 1%",
+		"last 2 versions"
+	],
 	"jest": {
 		"preset": "@vue/cli-plugin-unit-jest"
 	}
